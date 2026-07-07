@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anmol Vishnoi — Embedded Systems &amp; IoT Engineer</title>
+<meta name="description" content="Portfolio of Anmol Vishnoi, Electronics &amp; Communication Engineering student building embedded firmware and IoT systems.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="rail" aria-hidden="true">
+  <div class="rail-line"></div>
+  <div class="rail-pulse"></div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand"><span class="dot"></span>AV // schematic</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="reveal in-view">
+      <span class="eyebrow">// B.Tech ECE · Lovely Professional University</span>
+      <h1>Anmol Vishnoi<br><span class="accent">builds things that sense.</span></h1>
+      <p class="hero-role">Embedded Systems &amp; IoT Developer</p>
+      <p class="lede">I write the firmware and design the circuits that let hardware make decisions on its own — a gas leak shut off in under two seconds, an irrigation node talking over a kilometre of LoRa, a sensor rig that catches adulterated milk before it ships.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">View projects</a>
+        <a class="btn btn-ghost" href="final_ats1.pdf" target="_blank" rel="noopener">Download résumé</a>
+        <a class="btn btn-ghost" href="mailto:anmolvishnoi82@gmail.com">Email me</a>
+      </div>
+      <div class="hero-meta">
+        <a href="https://github.com/Anmolsaan" target="_blank" rel="noopener">github.com/Anmolsaan</a>
+        <a href="https://www.linkedin.com/in/anmol-vishnoi-3737" target="_blank" rel="noopener">linkedin.com/in/anmol-vishnoi-3737</a>
+        <span>+91-6387698552</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal in-view" aria-hidden="true">
+      <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>
+            .t-line{stroke:#2e5c47;stroke-width:2;fill:none;}
+            .t-glow{stroke:#57e0a0;stroke-width:2;fill:none;opacity:0.9;}
+            .t-node{fill:#11201a;stroke:#57e0a0;stroke-width:2;}
+            .t-label{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:#9fb3a8;letter-spacing:0.5px;}
+            .t-chip{fill:#16281f;stroke:#c9884e;stroke-width:1.5;}
+            .t-pin{fill:#c9884e;}
+          </style>
+        </defs>
+
+        <!-- traces -->
+        <path class="t-line" d="M210 150 L210 100 L120 100 L120 60"/>
+        <path class="t-line" d="M210 150 L300 150 L300 90 L340 90"/>
+        <path class="t-line" d="M210 230 L210 280 L110 280 L110 340"/>
+        <path class="t-line" d="M210 230 L210 280 L300 280 L300 350"/>
+        <path class="t-line" d="M170 190 L60 190 L60 230"/>
+        <path class="t-line" d="M250 190 L370 190 L370 240"/>
+
+        <path class="t-glow" d="M210 150 L210 100 L120 100 L120 60" stroke-dasharray="6 220" stroke-dashoffset="0">
+          <animate attributeName="stroke-dashoffset" values="226;0" dur="3.4s" repeatCount="indefinite"/>
+        </path>
+        <path class="t-glow" d="M210 230 L210 280 L300 280 L300 350" stroke-dasharray="6 220" stroke-dashoffset="0">
+          <animate attributeName="stroke-dashoffset" values="226;0" dur="4.1s" repeatCount="indefinite"/>
+        </path>
+
+        <!-- central MCU -->
+        <rect class="t-chip" x="170" y="150" width="80" height="80" rx="4"/>
+        <text x="210" y="185" text-anchor="middle" class="t-label" fill="#e3a866" font-weight="600">MCU</text>
+        <text x="210" y="200" text-anchor="middle" class="t-label" font-size="9">ESP32</text>
+        <g class="t-pin">
+          <rect x="176" y="146" width="6" height="8"/>
+          <rect x="196" y="146" width="6" height="8"/>
+          <rect x="216" y="146" width="6" height="8"/>
+          <rect x="236" y="146" width="6" height="8"/>
+          <rect x="176" y="226" width="6" height="8"/>
+          <rect x="196" y="226" width="6" height="8"/>
+          <rect x="216" y="226" width="6" height="8"/>
+          <rect x="236" y="226" width="6" height="8"/>
+        </g>
+
+        <!-- nodes -->
+        <circle class="t-node" cx="120" cy="60" r="14"/>
+        <text x="120" y="40" text-anchor="middle" class="t-label">GAS</text>
+
+        <circle class="t-node" cx="340" cy="90" r="14"/>
+        <text x="340" y="72" text-anchor="middle" class="t-label">SOLAR</text>
+
+        <circle class="t-node" cx="110" cy="340" r="14"/>
+        <text x="110" y="365" text-anchor="middle" class="t-label">LIQUID</text>
+
+        <circle class="t-node" cx="300" cy="350" r="14"/>
+        <text x="300" y="374" text-anchor="middle" class="t-label">LoRa</text>
+
+        <circle class="t-node" cx="60" cy="230" r="10"/>
+        <text x="35" y="234" text-anchor="middle" class="t-label" font-size="9">I/O</text>
+
+        <circle class="t-node" cx="370" cy="240" r="10"/>
+        <text x="393" y="234" text-anchor="middle" class="t-label" font-size="9">WiFi</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ABOUT / SKILLS ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">01</span>
+      <h2>About</h2>
+    </div>
+    <div style="max-width:70ch; margin-left:0;" class="reveal">
+      <p style="color:var(--text-dim); font-size:1rem; margin-left:0;" class="about-copy">
+        I'm an Electronics &amp; Communication Engineering student at Lovely Professional University, currently
+        finishing my degree while building embedded and IoT systems on the side — from safety shutoffs to
+        precision-agriculture irrigation to liquid-adulteration sensing. I spent a stretch at Super Tannery Limited
+        learning how a real manufacturing line runs, and I like projects that end with a working board on a desk,
+        not just a slide.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">02</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="tray reveal">
+      <div class="bin">
+        <span class="bin-label">Languages</span>
+        <div class="chip-row">
+          <span class="chip">C++</span><span class="chip">C</span><span class="chip">Embedded C</span>
+          <span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="bin">
+        <span class="bin-label">Frameworks</span>
+        <div class="chip-row">
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Bootstrap</span>
+          <span class="chip">Node.js</span><span class="chip">React</span>
+        </div>
+      </div>
+      <div class="bin">
+        <span class="bin-label">Tools &amp; Platforms</span>
+        <div class="chip-row">
+          <span class="chip">Arduino IDE</span><span class="chip">STM32CubeIDE</span><span class="chip">Proteus</span>
+          <span class="chip">MATLAB</span><span class="chip">MySQL</span><span class="chip">GitHub</span>
+          <span class="chip">VS Code</span><span class="chip">EDA Playground</span>
+        </div>
+      </div>
+      <div class="bin">
+        <span class="bin-label">Soft Skills</span>
+        <div class="chip-row">
+          <span class="chip">Creative problem-solving</span><span class="chip">Leadership</span>
+          <span class="chip">Adaptability</span><span class="chip">Resilience</span><span class="chip">Communication</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">03</span>
+      <h2>Projects</h2>
+    </div>
+    <div class="projects-list">
+
+      <article class="project-card reveal">
+        <svg class="project-icon" viewBox="0 0 96 96" fill="none">
+          <circle cx="48" cy="48" r="44" stroke="#2e5c47" stroke-width="2"/>
+          <path d="M48 24c-8 10-14 17-14 26a14 14 0 0028 0c0-9-6-16-14-26z" stroke="#57e0a0" stroke-width="2.5" fill="none"/>
+          <path d="M48 40c-4 5-6 8-6 12a6 6 0 0012 0c0-4-2-7-6-12z" fill="#c9884e" opacity="0.85"/>
+        </svg>
+        <div>
+          <div class="project-top">
+            <h3>Emergency Utility Shutoff</h3>
+            <span class="project-date">Nov 2025</span>
+          </div>
+          <span class="project-kind">IoT Project</span>
+          <ul>
+            <li>Developed <strong>ESP32 firmware</strong> for real-time gas and fire detection using GPIO interrupts.</li>
+            <li>Integrated gas and flame sensing modules with automated shutdown inside <strong>2 seconds</strong>.</li>
+            <li>Calibrated sensors to improve detection accuracy and cut false alarms.</li>
+          </ul>
+          <div class="tech-row"><span class="tech-tag">Embedded C</span><span class="tech-tag">ESP32</span><span class="tech-tag">GPIO Interrupts</span></div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <svg class="project-icon" viewBox="0 0 96 96" fill="none">
+          <circle cx="48" cy="48" r="44" stroke="#2e5c47" stroke-width="2"/>
+          <path d="M48 20c9 0 16 12 16 24 0 16-16 26-16 26s-16-10-16-26c0-12 7-24 16-24z" stroke="#c9884e" stroke-width="2.2"/>
+          <path d="M30 66q18-10 36 0" stroke="#57e0a0" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M26 74q22-12 44 0" stroke="#57e0a0" stroke-width="1.6" stroke-linecap="round" opacity="0.6"/>
+        </svg>
+        <div>
+          <div class="project-top">
+            <h3>Smart Solar-Powered IoT Irrigation &amp; Weather Monitoring</h3>
+            <span class="project-date">Jan 2026</span>
+          </div>
+          <span class="project-kind">Embedded &amp; IoT Project</span>
+          <ul>
+            <li>Built a dual-node irrigation system on <strong>ESP32 + LoRa</strong> with <strong>1&nbsp;km+ wireless range</strong>, cutting manual intervention by <strong>80%</strong>.</li>
+            <li>Integrated BME380, soil moisture, rain, and MQ135 sensors for live environmental data.</li>
+            <li>Automated irrigation against crop-specific soil-moisture thresholds, with manual override.</li>
+            <li>Designed for off-grid precision agriculture on renewable power.</li>
+          </ul>
+          <div class="tech-row"><span class="tech-tag">Embedded C</span><span class="tech-tag">LoRa</span><span class="tech-tag">AI/ML</span></div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <svg class="project-icon" viewBox="0 0 96 96" fill="none">
+          <circle cx="48" cy="48" r="44" stroke="#2e5c47" stroke-width="2"/>
+          <path d="M48 24c8 10 16 20 16 30a16 16 0 01-32 0c0-10 8-20 16-30z" stroke="#57e0a0" stroke-width="2.4"/>
+          <path d="M34 70h28M36 76h24M40 82h16" stroke="#c9884e" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+        </svg>
+        <div>
+          <div class="project-top">
+            <h3>LiquiSense</h3>
+            <span class="project-date">Feb 2026</span>
+          </div>
+          <span class="project-kind">Embedded System &amp; IoT Project</span>
+          <ul>
+            <li>Built a multi-sensor rig to detect adulteration in liquids, with a focus on dairy and other edible products.</li>
+            <li>Designed a web dashboard storing and visualizing <strong>1,000+ sensor readings</strong> in real time.</li>
+          </ul>
+          <div class="tech-row"><span class="tech-tag">Embedded C</span><span class="tech-tag">Web Dev</span><span class="tech-tag">MongoDB</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">04</span>
+      <h2>Experience</h2>
+    </div>
+    <ul class="timeline reveal">
+      <li>
+        <span class="timeline-date">May 2025</span>
+        <h3>Intern — Super Tannery Limited (Safety Shoe Company)</h3>
+        <ul>
+          <li>Learned polyurethane (PU) sole manufacturing, preparing and conditioning Polyol and Isocyanate at controlled temperatures for optimal viscosity and reactivity in DESMA direct-injection molding.</li>
+          <li>Worked across Quality Control, Packaging, and Logistics to see integrated production workflows, export compliance, and corporate governance at an internationally recognized footwear manufacturer.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="section-head reveal" style="margin-top:60px;">
+      <span class="section-tag">05</span>
+      <h2>Achievements</h2>
+    </div>
+    <ul class="timeline reveal">
+      <li>
+        <span class="timeline-date">Mar 2025</span>
+        <h3>First Runner-Up — RoboSoccer Competition, Techfest, IIT Mandi</h3>
+      </li>
+      <li>
+        <span class="timeline-date">Apr 2025</span>
+        <h3>Winner — Obstacle Robo Race, Utkarsh 2025, NIT Jalandhar</h3>
+      </li>
+      <li>
+        <span class="timeline-date">Feb 2026</span>
+        <h3>Recognition for an Innovative Project — Agrithon, LPU</h3>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CERTS + EDUCATION ================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-tag">06</span>
+      <h2>Certificates &amp; Education</h2>
+    </div>
+    <div class="split reveal">
+      <div>
+        <h3>Certificates</h3>
+        <ul class="list-clean">
+          <li><span class="item-name">Python Course <span class="item-sub">— Scaler</span></span><span class="item-date">Nov 2023</span></li>
+          <li><span class="item-name">Microcontroller &amp; Embedded C Programming <span class="item-sub">— Udemy</span></span><span class="item-date">Mar 2024</span></li>
+          <li><span class="item-name">Embedded Systems &amp; Robo C.S IoT Workshop <span class="item-sub">— IIT Mandi</span></span><span class="item-date">Mar 2025</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <div class="edu-block">
+          <div class="item-name">Lovely Professional University, Punjab</div>
+          <div class="item-detail">B.Tech — Electronics &amp; Communication Engineering · CGPA 6.8</div>
+          <div class="item-date">Since Aug 2023</div>
+        </div>
+        <div class="edu-block">
+          <div class="item-name">K.R. Education Centre, Kanpur</div>
+          <div class="item-detail">Higher Secondary · 73.2%</div>
+          <div class="item-date">Apr 2022 – Mar 2023</div>
+        </div>
+        <div class="edu-block">
+          <div class="item-name">K.R. Education Centre, Kanpur</div>
+          <div class="item-detail">Secondary · 60%</div>
+          <div class="item-date">Apr 2020 – Mar 2021</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap contact reveal">
+    <span class="eyebrow">// Get in touch</span>
+    <h2>Let's build something that works.</h2>
+    <p>Open to embedded systems, IoT, and firmware roles and internships. Reach out directly — I reply fast.</p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:anmolvishnoi82@gmail.com">anmolvishnoi82@gmail.com</a>
+      <a class="btn btn-ghost" href="tel:+916387698552">+91 6387698552</a>
+      <a class="btn btn-ghost" href="https://github.com/Anmolsaan" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/anmol-vishnoi-3737" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Anmol Vishnoi — built with HTML, CSS &amp; a soldering iron's worth of patience.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
